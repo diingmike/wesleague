@@ -1,0 +1,779 @@
+/*
+	Theme: Wes League;
+	Author: Michael Chan;
+	Date of Creation: Fri, March 7, 2025;
+	Colors: Flat UI, Turkish Palette;
+*/
+
+/* css for all pages */
+	html,body
+	{
+		font-size: 13px;
+	}
+/* css for all pages ends */
+
+/* css for banner */
+	.banner
+	{
+		min-height: 100vh;
+		background-image: url("../images/banner.jpg");
+		/*background-image: url("https://i.ibb.co/FkBq3ghB/banner.jpg");*/
+		background-size: cover;
+	}
+/* css for banner ends */
+
+/* css for buttons */
+	button
+	{
+		width: 50%;
+		padding: 3px 5px;
+		border: none;
+		cursor: pointer;
+		margin: 5px 10px;
+	}
+
+	.search-button
+	{
+		color: #1B1464;
+		background-color: white;
+		border-radius: 3px;
+		font-weight: bold;
+		margin-left: 5px;
+	}
+
+	.search-button:hover
+	{
+		background-color: #ced6e0;
+		color: #1B1464;
+	}
+/* css for buttons ends */
+
+/* css for header */
+	.header-cover
+	{
+		position: fixed;
+		z-index: 2;
+		background-color: rgba(0,0,0,0.6);
+		width: 100%;
+	}
+
+	header
+	{	
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header .logo
+	{
+		height: 70px;
+	}
+
+	header .logo img
+	{
+		height: 100%;
+	}
+
+	header ul
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header ul li
+	{
+		list-style: none;
+		margin-right: 50px;
+	}
+
+	header ul li a
+	{
+		text-decoration: none;
+		color: white;
+		padding: 5px 10px;
+		border-radius: 3px;
+	}
+
+	header ul li a:hover
+	{
+		background-color: white;
+		color: #1B1464;
+	}
+
+	header .search
+	{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.form-responsive
+	{
+		width: 100%;
+		padding: 3px 11px;
+		border: none;
+		border-radius: 3px;
+		margin-right: 7px;
+	}
+
+	.checkbtn
+	{
+		font-size: 30px;
+		color: white;
+		cursor: pointer;
+		display: none;
+	}
+
+	#check
+	{
+		display: none;
+	}
+/* css for header ends */
+
+/* css for sub header */
+	.sub-header
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 10px;
+	}
+
+	.sub-header-fixtures
+	{
+		width: 100%;
+		background-color: white;
+		padding: 10px 10px;
+		border-radius: 13px;
+	}
+
+	.sub-header-POTW
+	{
+		width: 100%;
+		background-color: white;
+		padding: 10px 10px;
+		border-radius: 13px;
+	}
+
+	.sub-header-news
+	{
+		width: 100%;
+		background-color: white;
+		padding: 10px 10px;
+		border-radius: 13px;
+	}
+
+	.sub-header-title
+	{
+		width: 130px;
+		border-bottom: 3px solid #1B1464;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 200;
+		margin: 0 auto 20px;
+		position: relative;
+		padding: 5px 0;
+	}
+
+	.POTW-box
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5px;
+	}
+
+	.POTW-image
+	{
+		width: 150px;
+	}
+
+	.POTW-image img
+	{
+		width: 100%;
+		border-radius: 13px;
+	}
+
+	.POTW-info
+	{
+		box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		border-radius: 13px;
+		padding: 8px 8px;
+	}
+
+	.POTW-info p span
+	{
+		background-color: #1B1464;
+		line-height: 0.5rem;
+		padding: 4px 11px;
+		font-weight: 600;
+		border-radius: 3px;
+		color: #fff;
+	}
+/* css for sub header ends */
+
+/* css for table */
+	table
+	{
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th, td
+	{
+		border: 1px solid #ddd;
+		padding: 8px;
+	}
+
+	tr:nth-child(even)
+	{
+		background-color: #f2f2f2;
+	}
+
+	tr:hover
+	{
+		background-color: #ddd;
+	}
+
+	th
+	{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: left;
+		background-color: #1B1464;
+		color: white;
+	}
+/* css for table ends */
+
+/* css for news table */
+	.news table
+	{
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.news th,td
+	{
+		border: 1px solid #ddd;
+		padding: 8px;
+	}
+
+	.news tr:nth-child(even)
+	{
+		background-color: #fff;
+	}
+
+	.news tr:hover
+	{
+		background-color: #fff;
+	}
+
+	.news td img
+	{
+		width: 100%;
+		border-radius: 13px;
+	}
+
+	.news td a
+	{
+		text-decoration: none;
+	}
+/* css for news table ends */
+
+/* css for gallery */
+	.gallery
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center-left;
+		flex-direction: row;
+		gap: 10px;
+	}
+
+	.gallery img
+	{
+		flex: 1 1 calc(25% - 10px); /* 25% for 4 images */
+		max-width: calc(25% - 10px);
+		height: auto;
+		border-radius: 13px;
+	}
+/* css for gallery ends */
+
+/* css for footer */
+	.footer-cover
+	{
+		background-color: #1B1464;
+		padding: 30px 0;
+	}
+
+	footer p
+	{
+		color: white;
+	}
+
+	.footer-media
+	{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.footer-media .social-media a
+	{
+		text-decoration: none;
+		color: white;
+	}
+
+	.footer-media .contact
+	{
+		color: white;
+	}
+
+	.footer-title
+	{
+		width: 100px;
+		color: white;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: 3px solid white;
+		padding: 5px 0;
+	}
+
+	.footer-title-social
+	{
+		width: 170px;
+		color: white;
+		font-size: 1.5rem;
+		font-weight: 600;
+		border-bottom: 3px solid white;
+		padding: 5px 0;
+	}
+/* css for footer ends */
+
+/* css for fixtures */
+	.fixtures
+	{
+		background-color: white;
+		border-radius: 13px;
+		padding: 20px 20px;
+	}
+
+	.section-title
+	{
+		width: 80px;
+		border-bottom: 3px solid #1B1464;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 200;
+		margin: 0 auto 20px;
+		position: relative;
+		padding: 5px 0;
+	}
+/* css for fixtures ends */
+
+/* css for results */
+	.results
+	{
+		background-color: white;
+		border-radius: 13px;
+		padding: 20px 20px;
+	}
+/* css for results ends */
+
+/* css for standings */
+	.standings
+	{
+		background-color: white;
+		border-radius: 13px;
+		padding: 20px 20px;
+	}
+/* css for standings ends */
+
+/* css for stats */
+	.stats
+	{
+		background-color: white;
+		border-radius: 13px;
+		padding: 20px 20px;
+	}
+/* css for stats ends */
+
+/* css for about */
+	.about
+	{
+		margin: 2% 8%;
+		background-color: white;
+		border-radius: 13px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.about-container
+	{
+		padding: 20px 20px;
+	}
+
+	.about-container img
+	{
+		float: left;
+		max-width: 20%;
+		border-radius: 13px;
+		margin-right: 10px;
+	}
+/* css for about ends */
+
+/* css for search */
+	.search-area
+	{
+		background-color: white;
+		border-radius: 13px;
+		padding: 20px 20px;
+	}
+
+	.section-title-long
+	{
+		width: 200px;
+		border-bottom: 3px solid #1B1464;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 200;
+		margin: 0 auto 20px;
+		position: relative;
+		padding: 5px 0;
+	}
+
+	.search-box
+	{
+		width: 50%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 5px;
+	}
+
+	.search-image
+	{
+		width: 250px;
+	}
+
+	.search-image img
+	{
+		width: 100%;
+		border-radius: 13px;
+	}
+
+	.search-info
+	{
+		box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		border-radius: 13px;
+		padding: 8px 8px;
+	}
+
+	.search-info p span
+	{
+		background-color: #1B1464;
+		line-height: 0.5rem;
+		padding: 4px 11px;
+		font-weight: 600;
+		border-radius: 3px;
+		color: #fff;
+	}
+/* css for search ends */
+
+/* css for news */
+	.full-news
+	{
+		margin: 2% 8%;
+		background-color: white;
+		border-radius: 13px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.full-news-container
+	{
+		padding: 20px 20px;
+	}
+
+	.full-news-container img
+	{
+		float: left;
+		max-width: 20%;
+		border-radius: 13px;
+		margin-right: 10px;
+	}
+
+	.full-news-header
+	{
+		font-weight: bold;
+		font-size: 16px;
+	}
+/* css for news ends */
+
+/* css for page responsiveness */
+	@media screen and (max-width:768px)
+	{
+		.checkbtn
+		{
+			display: block;
+			order: 1;
+			margin-right: 5px;
+		}
+
+		ul
+		{
+			position: fixed;
+			top: 100px;
+			right: -100%;
+			background-color: rgba(0,0,0,0.6);
+			width: 30%;
+			height: 80vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.3s;
+		}
+
+		ul li
+		{
+			margin: 25px 0;
+		}
+
+		ul li a
+		{
+			font-size: 13px;
+		}
+
+		#check:checked ~ ul
+		{
+			right: 0;
+		}
+
+		.sub-header
+		{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
+		}
+
+		.banner
+		{
+			min-height: 135vh;
+			background-image: url("../images/banner.jpg");
+			background-size: cover;
+		}
+
+		.gallery img
+		{
+			flex: 1 1 calc(33.33% - 10px); /* 25% for 4 images */
+			max-width: calc(33.33% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+
+		.search-box
+		{
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 5px;
+		}
+	}
+
+	@media screen and (max-width:425px)
+	{
+		header .logo
+		{
+			height: 50px;
+		}
+
+		header .logo img
+		{
+			height: 100%;
+		}
+
+		.checkbtn
+		{
+			font-size: 20px;
+			color: white;
+			cursor: pointer;
+			display: none;
+		}
+
+		.sub-header
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
+
+		.banner
+		{
+			min-height: 180vh;
+			background-image: url("../images/banner.jpg");
+			background-size: cover;
+		}
+
+		.gallery img
+		{
+			flex: 1 1 calc(50% - 10px); /* 25% for 4 images */
+			max-width: calc(50% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+
+		.footer-media
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
+
+		table
+		{
+			font-size: 80%;
+		}
+
+		.about
+		{
+			margin: 2% 3%;
+		}
+
+		.about-container img
+		{
+			max-width: 30%;
+		}
+
+		.full-news-container img
+		{
+			max-width: 30%;
+		}
+
+		.search-image
+		{
+			width: 200px;
+		}
+
+		.search-box
+		{
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
+	}
+
+	@media screen and (max-width:320px)
+	{
+		header .logo
+		{
+			height: 50px;
+		}
+
+		header .logo img
+		{
+			height: 100%;
+		}
+
+		.checkbtn
+		{
+			font-size: 16px;
+			color: white;
+			cursor: pointer;
+			display: none;
+		}
+
+		.checkbtn
+		{
+			font-size: 22px;
+			margin-left: 7px;
+			margin-right: 12px;
+		}
+
+		.form-responsive
+		{
+			width: 100%;
+			padding: 1px 5px;
+			border: none;
+			border-radius: 3px;
+			margin-right: 7px;
+		}
+
+		button
+		{
+			width: 50%;
+			padding: 1px 5px;
+			border: none;
+			cursor: pointer;
+			margin: 3px 7px;
+		}
+
+		.search-button
+		{
+			color: #1B1464;
+			background-color: white;
+			border-radius: 3px;
+			font-weight: bold;
+			margin-left: 2px;
+		}
+
+		.banner
+		{
+			min-height: 170vh;
+			background-image: url("../images/banner.jpg");
+			background-size: cover;
+		}
+
+		.gallery
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			flex-direction: row;
+			gap: 10px;
+		}
+
+		.gallery img
+		{
+			flex: 1 1 calc(100% - 10px); /* 25% for 4 images */
+			max-width: calc(100% - 10px);
+			height: auto;
+			border-radius: 13px;
+		}
+
+		.footer-media
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
+
+		table
+		{
+			font-size: 70%;
+		}
+
+		.about-container img
+		{
+			max-width: 40%;
+		}
+
+		.full-news-container img
+		{
+			max-width: 40%;
+		}
+
+		.search-image
+		{
+			width: 255px;
+		}
+
+		.search-box
+		{
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
+	}
+/* css for page responsiveness ends */

@@ -1,0 +1,292 @@
+/*
+	Theme: Wes League Admin;
+	Author: Michael Chan;
+	Date of Creation: Sat, March 15, 2025;
+	Colors: Flat UI, Turkish Palette;
+*/
+
+/* css for all */
+	html,body
+	{
+		font-size: 13px;
+	}
+/* css for all ends */
+
+/* css for header */
+	.header-cover
+	{
+		position: fixed;
+		z-index: 2;
+		background-color: #1B1464;
+		width: 100%;
+	}
+
+	header
+	{	
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	header .logo
+	{
+		height: 70px;
+	}
+
+	header .logo img
+	{
+		height: 100%;
+	}
+
+	header ul li
+	{
+		list-style: none;
+		display: inline-block;
+	}
+
+	header ul li a
+	{
+		display: inline-block;
+		height: 70px;
+		line-height: 70px;
+		text-decoration: none;
+		color: white;
+		padding: 0 15px;
+		background-color: #1B1464;
+	}
+
+	header ul li a:hover
+	{
+		background-color: white;
+		color: #1B1464;
+	}
+/* css for header ends */
+
+/* css for update data */
+	.data-dashboard
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 20px;
+	}
+
+	.data-box
+	{
+		box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		width: 100%;
+		padding: 20px 20px;
+		border-radius: 3px;
+	}
+
+	.form-responsive
+	{
+		width: 80%;
+		padding: 6px 10px;
+		margin: 6px 0;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+	}
+
+	.update-btn
+	{
+		padding: 3px 7px;
+		margin-top: 5px;
+		color: white;
+		font-weight: bold;
+		background-color: #4cd137;
+		border: none;
+		border-radius: 3px;
+		text-decoration: none;
+	}
+/* css for update data ends */
+
+/* css for buttons */
+	.back-btn
+	{
+		border: none;
+		margin-top: 10px;
+		padding: 3px 7px;
+		color: white;
+		background-color: #1B1464;
+		border-radius: 3px;
+		text-decoration: none;
+		font-weight: bold;
+		margin-right: 5px;
+	}
+/* css for buttons ends */
+
+/* css for dashboard */
+	.section-title
+	{
+		width: 80px;
+		border-bottom: 3px solid #1B1464;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 200;
+		margin: 0 auto 20px;
+		position: relative;
+		padding: 5px 0;
+	}
+
+	.section-title-long
+	{
+		width: 120px;
+		border-bottom: 3px solid #1B1464;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 200;
+		margin: 0 auto 20px;
+		position: relative;
+		padding: 5px 0;
+	}
+
+	.section-title-longer
+	{
+		width: 140px;
+		border-bottom: 3px solid #1B1464;
+		text-align: center;
+		font-size: 1.2rem;
+		font-weight: 200;
+		margin: 0 auto 20px;
+		position: relative;
+		padding: 5px 0;
+	}
+
+	.dashboard p span
+	{
+		background-color: #1B1464;
+		line-height: 0.5rem;
+		padding: 4px 11px;
+		font-weight: 600;
+		border-radius: 3px;
+		color: #fff;
+		margin-left: 10px;
+	}
+/* css for dashboard ends */
+
+/* css for table */
+	table
+	{
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th, td
+	{
+		border: 1px solid #ddd;
+		padding: 8px;
+	}
+
+	tr:nth-child(even)
+	{
+		background-color: #f2f2f2;
+	}
+
+	tr:hover
+	{
+		background-color: #ddd;
+	}
+
+	th
+	{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: left;
+		background-color: #1B1464;
+		color: white;
+	}
+/* css for table ends */
+
+/* css for page responsiveness */
+	@media screen and (max-width:768px)
+	{
+		header nav
+		{
+			position: relative;
+			border: 2px solid white;
+			height: 30px;
+			width: 30px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		header nav:after
+		{
+			top: 17px;
+		}
+
+		header nav:before
+		{
+			top: 7px;
+		}
+
+		header nav:after, header nav:before
+		{
+			content: "";
+			height: 2px;
+			width: 17px;
+			background-color: #fff;
+			display: block;
+			position: absolute;
+			left: 5px;
+		}
+
+		header nav ul
+		{
+			position: absolute;
+			right: -400px;
+			top: 55px;
+			transition: 0.5s;
+		}
+
+		header nav:hover ul
+		{
+			right: 0;
+		}
+
+		header nav ul li
+		{
+			display: block;
+		}
+
+		header nav ul li a
+		{
+			height: 40px;
+			line-height: 40px;
+			width: 150px;
+			background-color: rgba(0,0,0,0.7);
+		}
+
+		header nav ul li a:hover
+		{
+			background-color: #1B1464;
+			color: white;
+		}
+	}
+
+	@media screen and (max-width:425px)
+	{
+		.data-dashboard
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 20px;
+		}
+
+		table
+		{
+			font-size: 70%;
+		}
+
+		th,td
+		{
+			padding: 4px;
+		}
+
+		.here
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+		}
+	}
+/* css for page responsiveness ends */
