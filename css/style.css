@@ -312,8 +312,9 @@
 
 	.footer-media
 	{
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 200px;
 	}
 
 	.footer-media .social-media a
@@ -345,6 +346,27 @@
 		font-weight: 600;
 		border-bottom: 3px solid white;
 		padding: 5px 0;
+	}
+
+	.stakeholder-links
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 10px;
+		justify-content: center-left;
+	}
+
+	.stakeholder-links a img
+	{
+		width: 100px;
+		height: 135px;
+		border-radius: 13px;
+		filter: grayscale(100%);
+	}
+
+	.stakeholder-links a img:hover
+	{
+		filter: grayscale(0%);
 	}
 /* css for footer ends */
 
@@ -578,6 +600,13 @@
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 5px;
 		}
+
+		.footer-media
+		{
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 10px;
+		}
 	}
 
 	@media screen and (max-width:425px)
@@ -624,6 +653,27 @@
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-gap: 10px;
+		}
+
+		.stakeholder-links
+		{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 10px;
+			justify-content: center-left;
+		}
+
+		.stakeholder-links a img
+		{
+			width: 80px;
+			height: 115px;
+			border-radius: 13px;
+			filter: grayscale(100%);
+		}
+
+		.stakeholder-links a img:hover
+		{
+			filter: grayscale(0%);
 		}
 
 		table
