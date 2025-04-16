@@ -361,12 +361,6 @@
 		width: 100px;
 		height: 135px;
 		border-radius: 13px;
-		filter: grayscale(100%);
-	}
-
-	.stakeholder-links a img:hover
-	{
-		filter: grayscale(0%);
 	}
 /* css for footer ends */
 
@@ -668,12 +662,6 @@
 			width: 80px;
 			height: 115px;
 			border-radius: 13px;
-			filter: grayscale(100%);
-		}
-
-		.stakeholder-links a img:hover
-		{
-			filter: grayscale(0%);
 		}
 
 		table
