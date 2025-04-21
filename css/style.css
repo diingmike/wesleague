@@ -9,6 +9,7 @@
 	html,body
 	{
 		font-size: 13px;
+		scroll-behavior: smooth;
 	}
 /* css for all pages ends */
 
