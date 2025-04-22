@@ -602,21 +602,6 @@
 
 	@media screen and (max-width:425px)
 	{
-		header .logo
-		{
-			height: 50px;
-		}
-
-		header .logo img
-		{
-			height: 100%;
-		}
-
-		.checkbtn
-		{
-			font-size: 20px;
-		}
-
 		.sub-header
 		{
 			display: grid;
