@@ -531,42 +531,51 @@
 /* css for page responsiveness */
 	@media screen and (max-width:768px)
 	{
-		.checkbtn
-		{
-			display: block;
-			order: 1;
-			margin-right: 5px;
-		}
+		/* 768 homepage */
+			.checkbtn
+			{
+				display: block;
+				order: 1;
+				font-size: 30px;
+				color: white;
+				cursor: pointer;
+				margin-right: 10px;
+			}
 
-		ul
-		{
-			position: fixed;
-			top: 100px;
-			right: -100%;
-			background-color: rgba(0,0,0,0.6);
-			width: 30%;
-			height: 80vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			transition: all 0.3s;
-		}
+			ul
+			{
+				position: fixed;
+				top: 100px;
+				right: -100%;
+				background-color: rgba(0, 0, 0, 0.6);
+				width: 30%;
+				height: 60vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 
-		ul li
-		{
-			margin: 25px 0;
-		}
+			ul li
+			{
+				margin: 15px 0;
+			}
 
-		ul li a
-		{
-			font-size: 13px;
-		}
+			ul li a
+			{
+				font-size: 13px;
+			}
 
-		#check:checked ~ ul
-		{
-			right: 0;
-		}
+			#check:checked ~ ul
+			{
+				right: 0;
+			}
+		
+			.sub-header-search
+			{
+				width: 100%;
+			}
+		/* 768 homepage end */
 
 		.sub-header
 		{
@@ -608,6 +617,12 @@
 
 	@media screen and (max-width:425px)
 	{
+		/* 425 homepage */
+			ul
+			{
+				width: 50%;
+			}
+		/* 425 homepage end */
 		.sub-header
 		{
 			display: grid;
