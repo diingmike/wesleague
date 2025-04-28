@@ -631,6 +631,12 @@
 	@media screen and (max-width:425px)
 	{
 		/* 425 homepage */
+			.checkbtn
+			{
+				margin-right: 5px;
+				margin-left: 12px;
+			}
+		
 			ul
 			{
 				width: 50%;
@@ -651,6 +657,7 @@
 			button
 			{
 				padding: 2px 4px;
+				margin-left: 12px;
 			}
 		/* 425 homepage end */
 		.sub-header
