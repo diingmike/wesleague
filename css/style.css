@@ -635,6 +635,23 @@
 			{
 				width: 50%;
 			}
+
+			header .logo
+			{
+				height: 60px;
+			}
+
+			.form-responsive
+			{
+				padding: 2px 4px;
+				margin-right: 4px;
+				margin-left: 10px;
+			}
+
+			button
+			{
+				padding: 2px 4px;
+			}
 		/* 425 homepage end */
 		.sub-header
 		{
