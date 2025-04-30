@@ -378,6 +378,16 @@
 		height: 135px;
 		border-radius: 13px;
 	}
+
+	.go-up
+	{
+		position: fixed;
+		right: 0;
+		top: 90%;
+		margin-right: 30px;
+		width: 3%;
+		height: 50px;
+	}
 /* css for footer ends */
 
 /* css for fixtures */
@@ -626,6 +636,13 @@
 			grid-template-columns: 1fr;
 			grid-gap: 30px;
 		}
+
+		/* 768 footer */
+			.go-up
+			{
+				width: 6%;
+			}
+		/* 768 footer ends */
 	}
 
 	@media screen and (max-width:425px)
@@ -737,6 +754,13 @@
 			grid-template-columns: 1fr;
 			grid-gap: 10px;
 		}
+
+		/* 425 footer */
+			.go-up
+			{
+				width: 12%;
+			}
+		/* 425 footer ends */
 	}
 
 	@media screen and (max-width:320px)
@@ -799,5 +823,12 @@
 			grid-template-columns: 1fr;
 			grid-gap: 10px;
 		}
+
+		/* 320 footer */
+			.go-up
+			{
+				width: 17%;
+			}
+		/* 320 footer ends */
 	}
 /* css for page responsiveness ends */
