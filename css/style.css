@@ -385,7 +385,19 @@
 		right: 0;
 		top: 90%;
 		margin-right: 30px;
-		width: 2%;
+		width: 3%;
+		height: 50px;
+	}
+
+	.sosha-media
+	{
+		width: 20%;
+		height: 35px;
+	}
+
+	.sosha-media-con
+	{
+		width: 15%;
 		height: 35px;
 	}
 /* css for footer ends */
@@ -759,6 +771,16 @@
 			.go-up
 			{
 				width: 12%;
+			}
+
+			.sosha-media
+			{
+				width: 10%;
+			}
+
+			.sosha-media-con
+			{
+				width: 10%;
 			}
 		/* 425 footer ends */
 	}
