@@ -54,7 +54,7 @@
 	                    <li><a href="standings.html">Table</a></li>
 	                    <li><a href="stats.html">Stats</a></li>
 	                    <li><a href="about.html">About</a></li>
-	                    <li><a href="contact.html">Contact</a></li>
+	                    <li><a href="contact.html" class="active">Contact</a></li>
 	                </ul>
 	            </nav>
 
@@ -106,104 +106,143 @@
 	    </div>
 		<!--mobile nav end-->
 
-		<!--search results section-->
-        <section class="sr-section">
+		<!--contact section-->
+        <section class="contact-section">
             <div class="container">
 
                 <!-- Heading -->
                 <div class="section-heading">
                     <div class="section-heading-accent"></div>
-                    <span class="section-heading-text">Search</span>
+                    <span class="section-heading-text">Contact</span>
                     <div class="section-heading-line"></div>
                 </div>
 
-                <!--
-                    Inline search bar — lets users refine their search
-                    without going back to the header.
-                    The value attribute is populated server-side or via JS
-                    from the URL query string: search.html?q=Pedri
-                -->
-                <div class="sr-search-bar">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input
-                        type="text"
-                        class="sr-search-input"
-                        id="srInput"
-                        name="q"
-                        value="Pedri"
-                        placeholder="Search for a team or player…"
-                        autocomplete="off"
-                        aria-label="Refine search"
-                    />
-                    <button class="sr-search-btn" type="button" id="srBtn">
-                        <i class="fas fa-search" aria-hidden="true"></i> Search
-                    </button>
-                </div>
+                <div class="contact-grid">
 
-                <!-- Query summary -->
-                <p class="sr-query-line" id="srQueryLine">
-                    Showing results for <strong>"Pedri"</strong> — 1 result found
-                </p>
+                    <!-- ══ LEFT: Contact info ══ -->
+                    <div class="contact-info">
+                        <p class="contact-info-eyebrow">Get in touch</p>
+                        <h2 class="contact-info-title">Let's <span>Talk</span><br/>Football.</h2>
+                        <p class="contact-info-sub">
+                            Have a question, want to join the league, or just want to talk football?
+                            Reach out — we're always happy to hear from you.
+                        </p>
 
-                <!-- Filter tabs -->
-                <div class="sr-tabs" role="tablist">
-                    <button class="sr-tab active" role="tab" aria-selected="true">All</button>
-                    <button class="sr-tab" role="tab" aria-selected="false">Players</button>
-                    <button class="sr-tab" role="tab" aria-selected="false">Teams</button>
-                </div>
+                        <div class="contact-methods">
 
-                <!-- Results grid -->
-                <div class="sr-grid" id="srGrid">
+                            <a href="mailto:info@wesleague.com" class="contact-method">
+                                <div class="contact-method-icon email">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-method-text">
+                                    <span class="contact-method-label">Email</span>
+                                    <span class="contact-method-value">info@wesleague.com</span>
+                                </div>
+                            </a>
 
-                    <!--
-                        Each .sr-card represents one search result.
-                        Duplicate this block for additional results.
-                        Replace the <i> placeholder with:
-                        <img src="images/players/pedri.jpg" alt="Pedri"/>
-                    -->
-                    <div class="sr-card">
-                        <div class="sr-card-img">
-                            <img src="images/players/pedri.jpg" alt="Pedri"/>
-                            <!--<i class="fas fa-user" aria-hidden="true"></i>-->
-                            <span class="sr-jersey" aria-label="Jersey number 8">8</span>
-                            <span class="sr-type-badge">Player</span>
+                            <a href="tel:+254700000000" class="contact-method">
+                                <div class="contact-method-icon phone">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-method-text">
+                                    <span class="contact-method-label">Phone</span>
+                                    <span class="contact-method-value">+254 700 000 000</span>
+                                </div>
+                            </a>
+
+                            <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" class="contact-method">
+                                <div class="contact-method-icon whatsapp">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-method-text">
+                                    <span class="contact-method-label">WhatsApp</span>
+                                    <span class="contact-method-value">+254 700 000 000</span>
+                                </div>
+                            </a>
+
                         </div>
-                        <div class="sr-card-body">
-                            <div class="sr-card-name">Pedri</div>
-                            <div class="sr-card-team">
-                                <i class="fas fa-shield-alt" aria-hidden="true"></i> Barcelona
+                    </div><!-- /contact-info -->
+
+                    <!-- ══ RIGHT: Contact form ══ -->
+                    <div class="contact-form-card">
+                        <div class="form-title">Send Us a Message</div>
+
+                        <!--
+                            To make this form functional, point the action attribute
+                            at your server-side handler, e.g.:
+                            <form action="submit-contact.php" method="POST">
+                            Or use a service like Formspree: action="https://formspree.io/f/YOUR_ID"
+                        -->
+                        <form id="contactForm" novalidate>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="contactName">Your Name</label>
+                                    <input
+                                        type="text"
+                                        id="contactName"
+                                        name="name"
+                                        class="form-input"
+                                        placeholder="e.g. John Kamau"
+                                        autocomplete="name"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="contactEmail">Email Address</label>
+                                    <input
+                                        type="email"
+                                        id="contactEmail"
+                                        name="email"
+                                        class="form-input"
+                                        placeholder="e.g. john@email.com"
+                                        autocomplete="email"
+                                        required
+                                    />
+                                </div>
                             </div>
-                            <div class="sr-stats">
-                                <div class="sr-stat">
-                                    <div class="sr-stat-val">23</div>
-                                    <div class="sr-stat-lbl">GP</div>
-                                </div>
-                                <div class="sr-stat">
-                                    <div class="sr-stat-val">7</div>
-                                    <div class="sr-stat-lbl">Goals</div>
-                                </div>
-                                <div class="sr-stat">
-                                    <div class="sr-stat-val">11</div>
-                                    <div class="sr-stat-lbl">Assists</div>
-                                </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contactTopic">Topic</label>
+                                <select id="contactTopic" name="topic" class="form-select" required>
+                                    <option value="" disabled selected>Select a topic…</option>
+                                    <option value="join">Joining the League</option>
+                                    <option value="fixtures">Fixtures &amp; Scheduling</option>
+                                    <option value="results">Results &amp; Stats</option>
+                                    <option value="sponsorship">Sponsorship</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Add more .sr-card blocks here for additional results -->
+                            <div class="form-group">
+                                <label class="form-label" for="contactMessage">Message</label>
+                                <textarea
+                                    id="contactMessage"
+                                    name="message"
+                                    class="form-textarea"
+                                    placeholder="Type your message here…"
+                                    required
+                                ></textarea>
+                            </div>
 
-                </div><!-- /sr-grid -->
+                            <button type="submit" class="form-submit">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+                            </button>
 
-                <!-- No results state (shown via JS when grid is empty) -->
-                <div class="sr-empty" id="srEmpty" aria-live="polite">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <div class="sr-empty-title">No Results Found</div>
-                    <div class="sr-empty-sub">Try searching for a different player name or team.</div>
-                </div>
+                            <!-- Success notice — shown via JS after submit -->
+                            <div class="form-success" id="formSuccess" aria-live="polite">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                Message sent! We'll get back to you shortly.
+                            </div>
+
+                        </form>
+                    </div><!-- /contact-form-card -->
+
+                </div><!-- /contact-grid -->
 
             </div>
         </section>
-        <!--search results end-->
+        <!--contact end-->
 
 		<!--footer-->
         <section class="footer">

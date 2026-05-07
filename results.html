@@ -3,188 +3,533 @@
 	<head>
 		<title> Wes League </title>
 
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation Fri, March 7, 2025-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
 		<!--custom css-->
 		<link rel = "stylesheet" href = "css/style.css" />
-		
-		<!--bootstrap css-->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-		
-		<!--nav responsiveness css-->
-		<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-		
-		<meta charset = "UTF-8"/>
-		<meta name = "author" content = "Michael Chan"/> <!--date of creation Fri, March 7, 2025-->
-		<meta http-equiv = "X-UA-Compatible" content = "IE=edge"/>
-		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no"/>
+
+		<!--font awesome for icons-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+        <!--Google Fonts: Bebas Neue (logo) + Barlow Condensed (nav) + Barlow (body)-->
+    	<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+    	<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+    	<link href = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@400;500&display=swap" rel = "stylesheet" />
 	</head>
 
 	<body>
-		<!--header starts-->
-			<div class = "banner">
-				<div class = "header-cover">
-					<div class = "container">
-						<header>
-							<input type = "checkbox" id = "check" />
-							<label for = "check" class = "checkbtn">
-								<i class = "fas fa-bars"></i>
-							</label>
+		<!--header-->
+		<header class = "wl-header">
+        	<div class = "wl-header-inner">
 
-							<div class = "logo">
-								<a href = "index.html"> <img src = "images/logo.png" /> </a>
-								<!--<a href = "index.html"> <img src="https://i.ibb.co/V0f1QMhb/logo.png" alt="logo" border="0"> </a>-->
-							</div>
+	            <!--logo-->
+	            <a href = "index.html" class = "wl-logo">
+	                <div class = "wl-logo-text">
+	                    <span class = "wl-logo-wes"> WES </span>
+	                    <span class = "wl-logo-league"> League </span>
+	                </div>
+	                <!--hexagonal badge accent (inline SVG — no image file needed)-->
+	                <div class = "wl-logo-badge" aria-hidden = "true">
+	                    <svg viewBox = "0 0 40 46" fill = "none" xmlns = "http://www.w3.org/2000/svg">
+	                        <path d="M20 1L38 11V35L20 45L2 35V11L20 1Z" fill="none" stroke="#e8c84a" stroke-width="1.5" />
+	                        <path d="M20 7L33 14.5V29.5L20 37L7 29.5V14.5L20 7Z" fill="rgba(232,200,74,0.1)"/>
+	                        <line x1="20" y1="7"  x2="20" y2="37" stroke="#e8c84a" stroke-width="0.8" stroke-opacity="0.4"/>
+	                        <line x1="7"  y1="14.5" x2="33" y2="29.5" stroke="#e8c84a" stroke-width="0.8" stroke-opacity="0.4"/>
+	                        <line x1="33" y1="14.5" x2="7"  y2="29.5" stroke="#e8c84a" stroke-width="0.8" stroke-opacity="0.4"/>
+	                        <circle cx="20" cy="22" r="4" fill="none" stroke="#e8c84a" stroke-width="1"/>
+	                    </svg>
+	                </div>
+	            </a>
 
-							<ul>
-								<li> <a href = "index.html"> Home </a> </li>
-								<li> <a href = "fixtures.html"> Fixtures </a> </li>
-								<li> <a href = "results.html"> Results </a> </li>
-								<li> <a href = "standings.html"> Table </a> </li>
-								<li> <a href = "stats.html"> Stats </a> </li>
-								<li> <a href = "about.html"> About </a> </li>
-							</ul>
+            	<div class="wl-divider" aria-hidden="true"></div>
 
-							<form action = "" method = "POST">
-								<div class = "sub-search">
-									<input type = "text" name = "search" placeholder = "search for team or player" 
-										class = "form-responsive" />
-									<button type = "submit" class = "button search-button"> Search </button>
-								</div>
-							</form>
-						</header>
-					</div>
-				</div>
+	            <!-- Desktop Nav -->
+	            <nav aria-label="Primary navigation">
+	                <ul class="wl-nav">
+	                    <li><a href="index.html">Home</a></li>
+	                    <li><a href="fixtures.html">Fixtures</a></li>
+	                    <li><a href="results.html" class="active">Results</a></li>
+	                    <li><a href="standings.html">Table</a></li>
+	                    <li><a href="stats.html">Stats</a></li>
+	                    <li><a href="about.html">About</a></li>
+	                    <li><a href="contact.html">Contact</a></li>
+	                </ul>
+	            </nav>
 
-				<br/> <br/> <br/> <br/> <br/> <br/>
+	            <!-- Actions -->
+	            <div class="wl-actions">
+	                <button class="wl-search-btn" id="searchToggle" title="Search" aria-label="Toggle search" aria-expanded="false" aria-controls="searchDrawer">
+	                    <i class="fas fa-search" aria-hidden="true"></i>
+	                </button>
+	                <button class="wl-hamburger" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	            </div>
 
-				<!--results-->
-					<div class = "container">
-						<div class = "results">
-							<h1 class = "section-title"> Results </h1>
+        	</div>
+    	</header>
+		<!--header end-->
 
-							<table>
-								<tr>
-									<th> Match Day </th>
-									<th> Home </th>
-									<th> Score </th>
-									<th> Score </th>
-									<th> Away </th>
-								</tr>
+		<!--search-->
+		<div class="wl-search-drawer" id="searchDrawer" role="search" aria-hidden="true">
+	        <div class="wl-search-inner">
+	            <i class="fas fa-search wl-search-icon-fixed" aria-hidden="true"></i>
+	            <input
+	                type="text"
+	                class="wl-search-input"
+	                id="searchInput"
+	                name="search"
+	                placeholder="Search for a team or player . . ."
+	                autocomplete="off"
+	                tabindex="-1"
+	            />
+	            <button class="wl-search-submit" type="button">Search</button>
+	        </div>
+	    </div>
+		<!--search end-->
 
-								<tr>
-									<td> Match Day 1 </td>
-									<td> Team 1 </td>
-									<td> 1 </td>
-									<td> 1 </td>
-									<td> Team 2 </td>
-								</tr>
+		<!--mobile nav-->
+		<div class="wl-mobile-nav" id="mobileNav" aria-hidden="true">
+	        <ul>
+	            <li><a href="index.html">Home</a></li>
+	            <li><a href="fixtures.html">Fixtures</a></li>
+	            <li><a href="results.html">Results</a></li>
+	            <li><a href="standings.html">Table</a></li>
+	            <li><a href="stats.html">Stats</a></li>
+	            <li><a href="about.html">About</a></li>
+	            <li><a href="contact.html">Contact</a></li>
+	        </ul>
+	    </div>
+		<!--mobile nav end-->
 
-								<tr>
-									<td> Match Day 1 </td>
-									<td> Team 3 </td>
-									<td> 2 </td>
-									<td> 1 </td>
-									<td> Team 4 </td>
-								</tr>
+		<!--results section-->
+        <section class="results-section">
+            <div class="container">
 
-								<tr>
-									<td> Match Day 1 </td>
-									<td> Team 5 </td>
-									<td> 0 </td>
-									<td> 3 </td>
-									<td> Team 6 </td>
-								</tr>
+                <!-- Heading -->
+                <div class="section-heading">
+                    <div class="section-heading-accent"></div>
+                    <span class="section-heading-text">Results</span>
+                    <div class="section-heading-line"></div>
+                </div>
 
-								<tr>
-									<td> Match Day 1 </td>
-									<td> Team 7 </td>
-									<td> 0 </td>
-									<td> 0 </td>
-									<td> Team 8 </td>
-								</tr>
+                <!-- Filter / nav bar -->
+                <div class="fixtures-filters">
+                    <button class="filter-btn" id="prevMatchday" disabled>
+                        <i class="fas fa-chevron-left"></i> Prev
+                    </button>
+                    <div class="matchday-pills" id="matchdayPills">
+                        <button class="filter-btn active" data-day="1">Match Day 1</button>
+                        <button class="filter-btn" data-day="2">Match Day 2</button>
+                        <button class="filter-btn" data-day="3">Match Day 3</button>
+                    </div>
+                    <button class="filter-btn" id="nextMatchday">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
 
-								<tr>
-									<td> Match Day 1 </td>
-									<td> Team 9 </td>
-									<td> 2 </td>
-									<td> 2 </td>
-									<td> Team 10 </td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				<!--results end-->
+                <!-- ══ MATCH DAY 1 ══ -->
+                <div class="matchday-group" data-day="1">
+                    <div class="fx-matchday-header">
+                        <span class="fx-matchday-badge">Match Day 1</span>
+                        <span class="fx-matchday-date">9 March 2025</span>
+                        <span class="fx-matchday-count">5 results</span>
+                    </div>
+                    <div class="fx-table">
 
-			</div>
+                        <!-- thead -->
+                        <div class="rs-row rs-thead">
+                            <span class="rs-th-home">Home</span>
+                            <span class="rs-th-score">Score</span>
+                            <span class="rs-th-away">Away</span>
+                            <span>Result</span>
+                        </div>
 
-			<!--footer-->
-			<div class = "footer-cover">
-				<div class = "container">
-					<div class = "footer-media">
-						<div class = "stakeholders">
-							<h1 class = "footer-title-social"> Our Stakeholders </h1>
-						
-							<div class = "stakeholder-links">
-								<a href = ""> <img src = "images/stakeholders/gunners.jpg" /> </a>
-								<a href = ""> <img src = "images/stakeholders/fc-barcelona.jpg" /> </a>
-								<a href = ""> <img src = "images/stakeholders/dortmund.jpg" /> </a>
-								<a href = ""> <img src = "images/stakeholders/napoli.jpg" /> </a>
-								<a href = ""> <img src = "images/stakeholders/bournemouth.jpg" /> </a>
-								<a href = ""> <img src = "images/stakeholders/lyon.jpg" /> </a>
-							</div>
-						</div>
-						
-						<div class = "social-media">
-							<h1 class = "footer-title-social"> Follow Our Socials </h1>
+                        <div class="rs-row">
+                            <span class="rs-home">Arsenal</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">1</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">1</span>
+                            </div>
+                            <span class="rs-away">Chelsea</span>
+                            <span class="rs-badge rs-badge--draw">Draw</span>
+                        </div>
 
-							<a href = "">
-								<img src = "images/social-media/facebook.png" class = "sosha-media" /> 
-								Facebook
-							</a> <br/>
-							
-							<a href = "">
-								<img src = "images/social-media/instagram.png" class = "sosha-media" /> 
-								Instagram
-							</a> <br/>
-														
-							<a href = "">
-								<img src = "images/social-media/tiktok.png" class = "sosha-media" /> 
-								TikTok
-							</a>
-						</div>
+                        <div class="rs-row">
+                            <span class="rs-home rs-home--win">Liverpool</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">2</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">1</span>
+                            </div>
+                            <span class="rs-away">Man City</span>
+                            <span class="rs-badge rs-badge--home">Home Win</span>
+                        </div>
 
-						<div class = "contact">
-							<h1 class = "footer-title"> Contact Us </h1>
+                        <div class="rs-row">
+                            <span class="rs-home">Man United</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">0</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">3</span>
+                            </div>
+                            <span class="rs-away rs-away--win">Tottenham</span>
+                            <span class="rs-badge rs-badge--away">Away Win</span>
+                        </div>
 
-							<img src = "images/social-media/phone.png" class = "sosha-media-con" />
-							+211 980 486 224 <br/>
-							
-							<img src = "images/social-media/whatsapp.png" class = "sosha-media-con" />
-							+211 980 486 224 <br/>
-							
-							<img src = "images/social-media/email.png" class = "sosha-media-con" />
-							info@wesleague.com <br/>
-							
-							<img src = "images/social-media/location.png" class = "sosha-media-con" />
-							Ground Floor, Lukak Building, Malakia
-						</div>
-					</div>
+                        <div class="rs-row">
+                            <span class="rs-home rs-home--win">Atletico</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">2</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">0</span>
+                            </div>
+                            <span class="rs-away">Barcelona</span>
+                            <span class="rs-badge rs-badge--home">Home Win</span>
+                        </div>
 
-					<a href = "#">
-						<img src = "images/work/top-white.png" class = "go-up" />
-					</a>
-					
-					<hr style = "color: white;" />
+                        <div class="rs-row">
+                            <span class="rs-home">Real Madrid</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">0</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">0</span>
+                            </div>
+                            <span class="rs-away">AC Milan</span>
+                            <span class="rs-badge rs-badge--draw">Draw</span>
+                        </div>
 
-					<footer style = "text-align: center;">
-						<p> &copy; <span id = "year"></span> Wes League </p>
-					</footer>
+                    </div>
+                </div><!-- /matchday-group day 1 -->
 
-					<script>
-						document.getElementById("year").textContent = new Date().getFullYear();
-					</script>	
-				</div>
-			</div>
-		<!--footer ends-->
+                <!-- ══ MATCH DAY 2 ══ -->
+                <div class="matchday-group" data-day="2" hidden>
+                    <div class="fx-matchday-header">
+                        <span class="fx-matchday-badge">Match Day 2</span>
+                        <span class="fx-matchday-date">16 March 2025</span>
+                        <span class="fx-matchday-count">5 results</span>
+                    </div>
+                    <div class="fx-table">
+
+                        <div class="rs-row rs-thead">
+                            <span class="rs-th-home">Home</span>
+                            <span class="rs-th-score">Score</span>
+                            <span class="rs-th-away">Away</span>
+                            <span>Result</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home rs-home--win">Chelsea</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">3</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">1</span>
+                            </div>
+                            <span class="rs-away">Liverpool</span>
+                            <span class="rs-badge rs-badge--home">Home Win</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home">Man City</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">2</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">2</span>
+                            </div>
+                            <span class="rs-away">Arsenal</span>
+                            <span class="rs-badge rs-badge--draw">Draw</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home">Tottenham</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">1</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">2</span>
+                            </div>
+                            <span class="rs-away rs-away--win">Real Madrid</span>
+                            <span class="rs-badge rs-badge--away">Away Win</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home rs-home--win">Barcelona</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">4</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">0</span>
+                            </div>
+                            <span class="rs-away">Inter Milan</span>
+                            <span class="rs-badge rs-badge--home">Home Win</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home">AC Milan</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">1</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">1</span>
+                            </div>
+                            <span class="rs-away">Atletico</span>
+                            <span class="rs-badge rs-badge--draw">Draw</span>
+                        </div>
+
+                    </div>
+                </div><!-- /matchday-group day 2 -->
+
+                <!-- ══ MATCH DAY 3 ══ -->
+                <div class="matchday-group" data-day="3" hidden>
+                    <div class="fx-matchday-header">
+                        <span class="fx-matchday-badge">Match Day 3</span>
+                        <span class="fx-matchday-date">23 March 2025</span>
+                        <span class="fx-matchday-count">5 results</span>
+                    </div>
+                    <div class="fx-table">
+
+                        <div class="rs-row rs-thead">
+                            <span class="rs-th-home">Home</span>
+                            <span class="rs-th-score">Score</span>
+                            <span class="rs-th-away">Away</span>
+                            <span>Result</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home rs-home--win">Arsenal</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">3</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">0</span>
+                            </div>
+                            <span class="rs-away">Juventus</span>
+                            <span class="rs-badge rs-badge--home">Home Win</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home">Liverpool</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">2</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">2</span>
+                            </div>
+                            <span class="rs-away">Barcelona</span>
+                            <span class="rs-badge rs-badge--draw">Draw</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home">Real Madrid</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">1</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">2</span>
+                            </div>
+                            <span class="rs-away rs-away--win">Chelsea</span>
+                            <span class="rs-badge rs-badge--away">Away Win</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home rs-home--win">Inter Milan</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">2</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">0</span>
+                            </div>
+                            <span class="rs-away">Man City</span>
+                            <span class="rs-badge rs-badge--home">Home Win</span>
+                        </div>
+
+                        <div class="rs-row">
+                            <span class="rs-home">Atletico</span>
+                            <div class="rs-scoreline">
+                                <span class="rs-score rs-score--home">1</span>
+                                <span class="rs-dash">—</span>
+                                <span class="rs-score rs-score--away">1</span>
+                            </div>
+                            <span class="rs-away">Tottenham</span>
+                            <span class="rs-badge rs-badge--draw">Draw</span>
+                        </div>
+
+                    </div>
+                </div><!-- /matchday-group day 3 -->
+
+            </div>
+        </section>
+        <!--results section end-->
+
+		<!--footer-->
+        <section class="footer">
+            <div class="container">
+
+                <div class="footer-grid">
+
+                    <!-- ══ STAKEHOLDERS ══ -->
+                    <div class="footer-stakeholders">
+                        <h2 class="footer-title">Our Stakeholders</h2>
+                        <div class="stakeholder-grid">
+
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/arsenal.jpg" alt="Arsenal"/>
+                                <span class="stakeholder-name">Arsenal</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/fc-barcelona.jpg" alt="Barcelona"/>
+                                <span class="stakeholder-name">Barcelona</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/chelsea.jpg" alt="Chelsea"/>
+                                <span class="stakeholder-name">Chelsea</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/real-madrid.jpg" alt="Real Madrid"/>
+                                <span class="stakeholder-name">Real Madrid</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/man-city.jpg" alt="Man City"/>
+                                <span class="stakeholder-name">Man City</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/man-utd.jpg" alt="Man Utd"/>
+                                <span class="stakeholder-name">Man Utd</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/juventus.jpg" alt="Juventus"/>
+                                <span class="stakeholder-name">Juventus</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/ac-milan.jpg" alt="AC Milan"/>
+                                <span class="stakeholder-name">AC Milan</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/inter-milan.jpg" alt="Inter Milan"/>
+                                <span class="stakeholder-name">Inter Milan</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/liverpool.jpg" alt="Liverpool"/>
+                                <span class="stakeholder-name">Liverpool</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/tottenham.jpg" alt="Tottenham"/>
+                                <span class="stakeholder-name">Tottenham</span>
+                            </a>
+                            <a href="" class="stakeholder-pill">
+                                <img src="images/stakeholders/atletico.jpg" alt="Atletico"/>
+                                <span class="stakeholder-name">Atletico</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ══ SOCIALS ══ -->
+                    <div>
+                        <h2 class="footer-title">Follow Us</h2>
+                        <div class="social-links">
+
+                            <a href="" class="social-link">
+                                <div class="social-icon fb">
+                                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="social-label">Facebook</div>
+                                    <div class="social-handle">@WesLeague</div>
+                                </div>
+                            </a>
+
+                            <a href="" class="social-link">
+                                <div class="social-icon ig">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="social-label">Instagram</div>
+                                    <div class="social-handle">@WesLeague</div>
+                                </div>
+                            </a>
+
+                            <a href="" class="social-link">
+                                <div class="social-icon tt">
+                                    <i class="fab fa-tiktok" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <div class="social-label">TikTok</div>
+                                    <div class="social-handle">@WesLeague</div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ══ CONTACT ══ -->
+                    <div>
+                        <h2 class="footer-title">Contact Us</h2>
+                        <div class="contact-list">
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">+254 700 000 000</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <span class="contact-value">+254 700 000 000</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">info@wesleague.com</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Nairobi, Kenya</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div><!-- /footer-grid -->
+
+                <!-- ══ BOTTOM BAR ══ -->
+                <div class="footer-bottom">
+                    <a href="index.html" class="footer-logo">
+                        <span class="footer-logo-wes">WES</span>
+                        <span class="footer-logo-league">League</span>
+                    </a>
+                    <p class="footer-copy">
+                        &copy; <span id="year"></span> <span>Wes League</span>. All rights reserved.
+                    </p>
+                    <a href="#" class="back-to-top" title="Back to top" aria-label="Back to top">
+                        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <!--footer end-->
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript end-->
 	</body>
 </html>
